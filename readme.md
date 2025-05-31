@@ -35,32 +35,32 @@ npm start
 ## 🗂️ Cấu trúc thư mục
 ```
 .
-└── Post
-    ├── __tests__                    // all the tests for this module goes here
-    |   ├── components               // Sub components of this module
-    |   |   ├── Post.spec.js
-    |   |   ├── PostList.spec.js
-    |   |   ├── PostItem.spec.js
-    |   |   └── PostImage.spec.js
-    |   ├── pages
-    |   |   ├── PostPage.spec.js
-    |   |   └── PostViewPage.spec.js
-    |   ├── PostReducer.spec.js
-    |   └── PostActions.spec.js
-    ├── components                   // Sub components of this module
-    |   ├── Post.js
-    |   ├── PostList.js
-    |   ├── PostItem.js
-    |   └── PostImage.js
-    ├── pages                        // React Router Pages from this module
-    |   ├── PostPage
-    |   |   ├── PostPage.js
-    |   |   └── PostPage.css
-    |   └── PostViewPage
-    |       ├── PostViewPage.js
-    |       └── PostViewPage.css
-    ├── PostReducer.js
-    └── PostActions.js
+└── GiaoHangTietKiemClone/
+    ├── .github/                  # GitHub Actions và workflows
+    │   └── workflows/            # CI/CD pipelines
+    │
+    ├── backend/                  # Backend API Server
+    │   ├── controllers/          # Business logic handlers
+    │   ├── routes/               # API route definitions
+    │   ├── middlewares/          # Express middlewares
+    │   ├── models/               # Database models
+    │   ├── prisma/               # Prisma ORM config
+    │   ├── utils/                # Utility functions
+    │   ├── generated/            # Generated files
+    │   ├── index.js              # Entry point
+    │   └── package.json          # Backend dependencies
+    │
+    ├── client/                   # Frontend React Application
+    │   ├── src/                  # Source code
+    │   ├── public/               # Static files
+    │   ├── dist/                 # Build output
+    │   ├── vite.config.js        # Vite configuration
+    │   └── package.json          # Frontend dependencies
+    │
+    ├── CODE_OF_CONDUCT.md        # Code of Conduct
+    ├── LICENSE                   # MIT License
+    └── README.md                 # Project documentation
+
 ```
 
 ## ⚡️ Các lệnh npm backend
