@@ -5,8 +5,6 @@
 
 **GHTK Clone** là hệ thống quản lý giao vận hiện đại, đa vai trò, tối ưu cho shipper và khách hàng, sử dụng React, Redux Toolkit, Material UI, với luồng dữ liệu đồng bộ, hiệu năng cao và UI thân thiện.
 
----
-
 ## 🚀 Tính năng nổi bật
 
 - **Khách hàng:** Tạo, theo dõi, quản lý đơn hàng, tra cứu trạng thái, phí ship, chi tiết đơn.
@@ -15,8 +13,6 @@
 - **UI/UX tối ưu:** Thao tác nhanh, rõ ràng, phù hợp thực tế giao vận.
 - **Đồng bộ dữ liệu:** Redux Toolkit, cập nhật trạng thái nhanh, không cần reload toàn bộ danh sách.
 - **Tích hợp Google Maps:** Chỉ đường nhanh cho shipper.
-
----
 
 ## 🛠️ Công nghệ sử dụng
 
