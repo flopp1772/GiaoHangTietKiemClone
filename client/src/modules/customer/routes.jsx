@@ -27,36 +27,7 @@ const CustomerRoutes = {
                 {
                     path: 'my-orders',
                     element: <MyOrders />
-                },
-                {
-                    path: 'orders-in-delivery',
-                    element: <h1>Hello Orders in delivery</h1>
-                },
-                {
-                    path: 'orders-received',
-                    element: <h1>Hello Orders received</h1>
-                },
-                {
-                    path: 'canceled-orders',
-                    element: <h1>Hello Canceled orders</h1>
-                },
-                {
-                    path: 'order-history',
-                    element: <h1>Hello Order history</h1>
                 }
-                // Các route khác sẽ thêm sau khi có component
-                // {
-                //     path: 'orders',
-                //     element: <OrderHistory />
-                // },
-                // {
-                //     path: 'profile',
-                //     element: <Profile />
-                // },
-                // {
-                //     path: 'settings',
-                //     element: <Settings />
-                // }
             ]
         }
     ]

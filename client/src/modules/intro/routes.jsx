@@ -26,18 +26,6 @@ const introRoutes = [
             { path: 'news', element: <News /> },
             { path: 'faq', element: <FAQ /> },
         ],
-    },
-    {
-        path: '/test',
-        element: (
-            <div>
-                hello world
-                <Outlet /> {/* để hiện route con */}
-            </div>
-        ),
-        children: [
-            { path: 'ok', element: <div>123</div> },
-        ],
     }
 ];
 

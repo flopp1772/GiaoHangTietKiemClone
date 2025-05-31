@@ -24,14 +24,6 @@ const authRoutes = [
         )
     },
     {
-        path: '/test',
-        element: (
-            <AuthGuard>
-                <div>hello world</div>
-            </AuthGuard>
-        ),
-    },
-    {
         path: '/auth',
         element: <Navigate to="/login" replace />
     }

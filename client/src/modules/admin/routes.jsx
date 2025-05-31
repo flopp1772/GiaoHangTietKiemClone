@@ -25,23 +25,6 @@ const AdminRoutes = {
                     path: 'manage-users',
                     element: <ManageUsers />
                 },
-                // Các route khác sẽ thêm sau khi có component
-                // {
-                //     path: 'manage-users',
-                //     element: <ManageUsers />
-                // },
-                // {
-                //   path: 'manage-staffs',
-                //   element: <ManageStaffs />
-                // },
-                // {
-                //   path: 'settings',
-                //   element: <Settings />
-                // },
-                // {
-                //   path: 'reports',
-                //   element: <Reports />
-                // }
             ]
         }
     ]

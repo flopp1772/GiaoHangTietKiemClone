@@ -14,7 +14,7 @@ import LogoutOutlined from '@ant-design/icons/LogoutOutlined';
 import UserOutlined from '@ant-design/icons/UserOutlined';
 
 // Redux actions
-import { logoutUser } from '@/redux/actions/authActions';
+import { logoutUser } from '@/redux/auth/authActions';
 
 // ==============================|| HEADER PROFILE - PROFILE TAB ||============================== //
 

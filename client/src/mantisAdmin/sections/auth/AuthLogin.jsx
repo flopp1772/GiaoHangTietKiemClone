@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, memo } from 'react';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '@/redux/actions/authActions';
+import { loginUser } from '@/redux/auth/authActions';
 
 // material-ui
 import Button from '@mui/material/Button';

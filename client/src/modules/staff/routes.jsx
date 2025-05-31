@@ -24,19 +24,6 @@ const ShipperRoutes = {
                     path: 'tasks', // hoặc 'orders'
                     element: <MyShipperJobs />
                 }
-                // Các route khác sẽ thêm sau khi có component
-                // {
-                //     path: 'orders',
-                //     element: <OrderHistory />
-                // },
-                // {
-                //     path: 'profile',
-                //     element: <Profile />
-                // },
-                // {
-                //     path: 'settings',
-                //     element: <Settings />
-                // }
             ]
         }
     ]
