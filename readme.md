@@ -22,8 +22,6 @@
 - **Backend:** (Tuỳ chọn: NodeJS/Express/MongoDB hoặc backend riêng)
 - **Khác:** Google Maps, responsive UI, tối ưu hiệu năng
 
----
-
 ## 📦 Cài đặt & Khởi động
 
 ```sh
@@ -34,11 +32,7 @@ npm start
 ```
 > **Lưu ý:** Đảm bảo backend/API đã chạy và cấu hình endpoint đúng trong `.env`.
 
----
-
 ## 🗂️ Cấu trúc thư mục
-
----
 
 ## ⚡️ Các lệnh npm
 
@@ -49,8 +43,6 @@ npm start
 | npm run test        | Chạy test                             |
 | npm run lint        | Kiểm tra lint                         |
 
----
-
 ## 🧩 Luồng hoạt động chính
 
 1. **Khách hàng tạo đơn hàng** → Đơn hàng vào trạng thái PROCESSING.
@@ -58,13 +50,9 @@ npm start
 3. **Mọi thay đổi trạng thái/ghi chú đều cập nhật trực tiếp vào Redux store, UI tự động đồng bộ.**
 4. **Dữ liệu luôn được lấy mới nhất từ Redux, đảm bảo đồng bộ giữa các thành phần.**
 
----
-
 ## 📝 Đóng góp
 
 PRs luôn được chào đón! Hãy fork repo, tạo branch mới và gửi pull request.
-
----
 
 ## 📄 License
 
