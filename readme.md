@@ -62,14 +62,27 @@ npm start
     ├── PostReducer.js
     └── PostActions.js
 ```
-## ⚡️ Các lệnh npm
 
-| Lệnh                | Mô tả                                 |
-|---------------------|---------------------------------------|
-| npm start           | Chạy dev server với hot reload         |
-| npm run build       | Build production                      |
-| npm run test        | Chạy test                             |
-| npm run lint        | Kiểm tra lint                         |
+## ⚡️ Các lệnh npm backend
+
+| Lệnh                             | Mô tả                                        |
+|----------------------------------|----------------------------------------------|
+| npm start                        | Chạy server backend (Node.js)                |
+| npx prisma migrate dev           | Chạy migration Prisma                        |
+| npx prisma migrate reset --force | Reset database và migrate lại                |
+| npx prisma generate              | Sinh lại Prisma Client                       |
+| npx prisma studio                | Mở Prisma Studio (giao diện quản lý DB)      |
+| npm run seed                     | Seed dữ liệu mẫu (nếu có script seed)        |
+| npm list --depth=0               | Kiểm tra các package đã cài                  |
+
+## ⚡️ Các lệnh npm frontend
+
+| Lệnh                | Mô tả                                         |
+|---------------------|-----------------------------------------------|
+| npm run dev         | Chạy server phát triển (Vite, hot reload)     |
+| npm run build       | Build project cho production                  |
+| npm run preview     | Xem thử bản build production trên local       |
+| npm run lint        | Kiểm tra code với ESLint                      |
 
 ## 🧩 Luồng hoạt động chính
 
