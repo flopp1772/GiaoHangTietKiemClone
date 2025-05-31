@@ -1,0 +1,1 @@
+export const DRAWER_WIDTH = 260; // hoặc giá trị phù hợp với thiết kế của bạn 

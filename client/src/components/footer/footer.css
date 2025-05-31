@@ -1,0 +1,388 @@
+/* Footer.css */
+
+.footer {
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 0.75rem;
+    /* 12px */
+    padding-top: 4rem;
+    /* 64px */
+}
+
+/* breakpoint md: min-width 768px */
+@media (min-width: 768px) {
+    .footer {
+        padding-bottom: 3rem;
+        /* 48px */
+    }
+}
+
+/* breakpoint lg: min-width 1024px */
+@media (min-width: 1024px) {
+    .footer {
+        padding-top: 8rem;
+        /* 128px */
+    }
+}
+
+/* breakpoint 2xl: min-width 1536px */
+@media (min-width: 1536px) {
+    .footer {
+        padding-top: 120px;
+    }
+}
+
+
+/* custom-footer tương đương với class Tailwind: 
+w-auto p-5 md:p-12 md:pb-8 2xl:p-16 2xl:pb-12 rounded-2xl flex flex-col mx-auto tracking-2pct
+*/
+
+/* width auto */
+.custom-footer {
+    background: linear-gradient(to top right, #a2ffbc 0%, #e8ffef 100%);
+    padding: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.02em;
+}
+
+/* breakpoint md >=768px: p-12 (3rem) và pb-8 (2rem) */
+@media (min-width: 768px) {
+    .custom-footer {
+        padding: 3rem;
+        /* p-12 */
+        padding-bottom: 2rem;
+        /* pb-8 */
+    }
+}
+
+/* breakpoint 2xl >=1536px: p-16 (4rem) và pb-12 (3rem) */
+@media (min-width: 1536px) {
+    .custom-footer {
+        padding: 4rem;
+        /* p-16 */
+        padding-bottom: 3rem;
+        /* pb-12 */
+    }
+}
+
+/* layer1 tương đương với:
+flex justify-between flex-col md:flex-row gap-0 md:gap-6 pb-8 md:pb-2
+*/
+
+/* flex container, direction column, justify space-between */
+.layer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    padding-bottom: 2rem;
+    /* mặc định pb-8 = 32px */
+}
+
+/* breakpoint md (min-width 768px): direction row, gap 1.5rem (gap-6), padding-bottom 0.5rem (pb-2) */
+@media (min-width: 768px) {
+    .layer1 {
+        flex-direction: row;
+        gap: 1.5rem;
+        /* gap-6 = 24px */
+        padding-bottom: 0.5rem;
+        /* pb-2 = 8px */
+    }
+}
+
+/* Link a với margin-bottom mb-8 và md:mb-12 */
+.logo-link {
+    margin-bottom: 2rem;
+    /* mb-8 = 32px */
+    display: inline-block;
+    /* để margin-bottom có hiệu lực */
+}
+
+@media (min-width: 768px) {
+    .logo-link {
+        margin-bottom: 3rem;
+        /* mb-12 = 48px */
+    }
+}
+
+/* Ảnh với class w-2/3 = width: 66.6667% */
+.logo-img {
+    width: 66.6667%;
+    height: auto;
+    /* giữ tỉ lệ ảnh */
+}
+
+/* Social block:
+   flex row mặc định
+   flex column ở md
+   items center
+   gap-4 (1rem) mặc định, gap-3 (0.75rem) ở md
+*/
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    /* gap-4 = 16px */
+}
+
+@media (min-width: 768px) {
+    .social {
+        flex-direction: column;
+        gap: 0.75rem;
+        /* gap-3 = 12px */
+    }
+}
+
+/* text-nowrap: không cho chữ xuống dòng */
+.social-title {
+    white-space: nowrap;
+    flex: 1;
+    font-size: 0.875rem;
+    /* text-sm = 14px */
+}
+
+@media (min-width: 768px) {
+    .social-title {
+        flex: 0 1 auto;
+        /* md:flex-initial */
+        font-size: 1.125rem;
+        /* text-lg = 18px */
+    }
+}
+
+/* Mạng xã hội: flex hàng ngang, căn giữa, gap thay đổi theo breakpoint */
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    /* gap-3 = 12px */
+}
+
+@media (min-width: 640px) {
+    .social-icons {
+        gap: 1.5rem;
+        /* sm:gap-6 = 24px */
+    }
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        gap: 0.75rem;
+        /* md:gap-3 = 12px */
+    }
+}
+
+/* Thẻ a chứa icon */
+.social-icon-link {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    /* giống rounded */
+    transition: background-color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    background-color: #01e53c;
+    /* hover:bg-[#01e53c] */
+}
+
+/* SVG icon transition */
+.social-icon-svg {
+    transition: all 0.2s ease;
+}
+
+.social-icon-link {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    background-color: #01e53c;
+}
+
+.social-icon-svg {
+    transition: all 0.2s ease;
+}
+
+.layer2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* tương đương gap-8 */
+    padding-bottom: 2rem;
+    /* tương đương pb-8 */
+}
+
+/* >=768px (md) */
+@media (min-width: 768px) {
+    .layer2 {
+        gap: 2.5rem;
+        /* md:gap-10 */
+        padding-bottom: 2rem;
+        /* md:pb-8 (vẫn giữ nguyên) */
+    }
+}
+
+/* >=1280px (xl) */
+@media (min-width: 1280px) {
+    .layer2 {
+        flex-wrap: nowrap;
+        /* xl:flex-nowrap */
+        flex-direction: row;
+        /* xl:flex-row */
+        gap: 1rem;
+        /* xl:gap-4 */
+    }
+}
+
+/* >=1536px (2xl) */
+@media (min-width: 1536px) {
+    .layer2 {
+        gap: 3.5rem;
+        /* 2xl:gap-14 */
+    }
+}
+
+.layer-2-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+    /* fallback nếu không vào breakpoint nào */
+}
+
+/* >=768px (md) */
+@media (min-width: 768px) {
+    .layer-2-1 {
+        flex-direction: row;
+        gap: 1.25rem;
+        /* md:gap-5 */
+    }
+}
+
+/* >=1024px (lg) */
+@media (min-width: 1024px) {
+    .layer-2-1 {
+        gap: 2rem;
+        /* lg:gap-8 */
+    }
+}
+
+/* >=1280px (xl) */
+@media (min-width: 1280px) {
+    .layer-2-1 {
+        width: auto;
+        /* xl:w-auto */
+        gap: 0.5rem;
+        /* xl:gap-2 */
+    }
+}
+
+/* >=1536px (2xl) */
+@media (min-width: 1536px) {
+    .layer-2-1 {
+        gap: 2.5rem;
+        /* 2xl:gap-10 */
+    }
+}
+
+.layer-2-1-1 {
+    border-bottom: 1px solid #21A236;
+}
+
+/* Nếu là phần tử đầu tiên */
+.layer-2-1-1:first-child {
+    border-top: 1px solid #21A236;
+}
+
+/* >=768px (md): bỏ viền */
+@media (min-width: 768px) {
+    .layer-2-1-1 {
+        border: none;
+    }
+}
+
+/* >=1280px (xl) */
+@media (min-width: 1280px) {
+    .layer-2-1-1 {
+        width: 175px;
+    }
+}
+
+/* >=1536px (2xl) */
+@media (min-width: 1536px) {
+    .layer-2-1-1 {
+        width: 180px;
+    }
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #21A236;
+    font-size: 0.875rem;
+    /* text-sm */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 500;
+    /* font-medium */
+}
+
+/* Ẩn icon trên màn hình md trở lên */
+.menu-icon {
+    display: block;
+    padding-right: 0.25rem;
+    /* pr-1 */
+    user-select: none;
+}
+
+/* Hình ảnh bên trong */
+.icon-img {
+    transform: rotate(-180deg);
+    transition: transform 0.3s;
+    color: transparent;
+}
+
+/* >=768px (md) */
+@media (min-width: 768px) {
+    .menu-item {
+        font-size: 1.125rem;
+        /* md:text-lg */
+        padding: 0;
+    }
+
+    .menu-title {
+        font-size: 1.125rem;
+        /* md:text-lg */
+        font-weight: 400;
+        /* md:font-normal */
+    }
+
+    .menu-icon {
+        display: none;
+        padding-right: 0;
+    }
+}

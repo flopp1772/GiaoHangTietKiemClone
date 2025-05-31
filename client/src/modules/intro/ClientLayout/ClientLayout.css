@@ -1,0 +1,64 @@
+.fixedHeader {
+    position: fixed;
+    /* fixed: luôn cố định tại một vị trí */
+    top: 0;
+    /* top-0: sát mép trên */
+    left: 0;
+    /* left-0: sát mép trái */
+    width: 100%;
+    /* w-full: chiều rộng 100% của parent (thường là viewport) */
+    z-index: 60;
+    /* z-[60]: độ ưu tiên hiển thị (stacking layer) */
+}
+
+
+.selector {
+    position: relative;
+    height: 64px;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* hoặc block nếu không cần flex */
+    align-items: center;
+    /* căn dọc nếu dùng flex */
+    flex-shrink: 0;
+    /* tránh bị co nhỏ */
+    overflow: hidden;
+    /* tránh nội dung tràn */
+}
+
+.square-box {
+    width: 100%;
+    /* full chiều ngang viewport */
+    height: 100%;
+    /* chiều cao bằng chiều ngang */
+    background-color: #4CAF50;
+    /* ví dụ màu xanh lá */
+}
+
+.content {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

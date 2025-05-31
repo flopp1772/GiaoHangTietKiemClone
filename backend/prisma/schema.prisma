@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  admin
+  shipper
+  customer
+}
+
+enum OrderStatus {
+  PROCESSING   // Đang xử lý
+  SHIPPING     // Đang giao
+  DELIVERED    // Đã giao
+}
+
+enum UserStatus {
+  ACTIVE      // Đang hoạt động
+  INACTIVE    // Không hoạt động
+  BUSY        // Đang bận (cho shipper)
+  OFFLINE     // Ngoại tuyến
+}
+
+model User {
+  id                 Int          @id @default(autoincrement())
+  store_name         String
+  email              String       @unique
+  phone              String       @unique
+  password           String
+  role               Role
+  status             UserStatus   @default(ACTIVE)
+  created_at         DateTime     @default(now())
+  updated_at         DateTime     @updatedAt
+  is_deleted         Boolean      @default(false)
+  deleted_at         DateTime?
+
+  orders             Order[]      @relation("UserOrders")
+  addresses          Address[]    @relation("UserAddresses")
+  shipmentsAsShipper Shipment[]   @relation("ShipmentsByShipper")
+
+  @@map("users")
+}
+
+model Order {
+  id               Int           @id @default(autoincrement())
+  customerId       Int
+  orderDate        DateTime      @default(now())
+  status           OrderStatus   @default(PROCESSING)
+  shippingFee      Float
+  addressDetail    String
+  province         String
+  district         String
+  ward             String
+  zip              String?
+  recipientName    String
+  recipientPhone   String?
+  description      String?
+  productName      String
+  weight           Float 
+  quantity         Int
+  latitude         Float?        // Thêm tọa độ vĩ độ
+  longitude        Float?        // Thêm tọa độ kinh độ
+  is_deleted       Boolean       @default(false)
+  deleted_at       DateTime?
+
+  customer         User          @relation("UserOrders", fields: [customerId], references: [id])
+  shipments        Shipment[]
+  payments         Payment[]
+  invoices         Invoice[]
+}
+
+model Shipment {
+  id             Int      @id @default(autoincrement())
+  orderId        Int
+  shipperId      Int
+  pickupDate     DateTime
+  deliveryDate   DateTime
+  trackingNumber String
+  is_deleted     Boolean  @default(false)
+  deleted_at     DateTime?
+
+  order          Order    @relation(fields: [orderId], references: [id])
+  shipper        User     @relation("ShipmentsByShipper", fields: [shipperId], references: [id])
+}
+
+model Address {
+  id            Int      @id @default(autoincrement())
+  userId        Int
+  addressDetail String
+  province      String
+  district      String
+  ward          String
+  postalCode    String?
+  latitude      Float?
+  longitude     Float?
+  is_deleted    Boolean  @default(false)
+  deleted_at    DateTime?
+
+  user          User     @relation("UserAddresses", fields: [userId], references: [id])
+}
+
+model Payment {
+  id            Int      @id @default(autoincrement())
+  orderId       Int
+  paymentMethod String
+  paymentDate   DateTime @default(now())
+  amount        Float
+  paymentStatus String
+  is_deleted    Boolean  @default(false)
+  deleted_at    DateTime?
+
+  order         Order    @relation(fields: [orderId], references: [id])
+}
+
+model Invoice {
+  id          Int      @id @default(autoincrement())
+  orderId     Int
+  issueDate   DateTime @default(now())
+  totalAmount Float
+  is_deleted  Boolean  @default(false)
+  deleted_at  DateTime?
+
+  order       Order    @relation(fields: [orderId], references: [id])
+}
