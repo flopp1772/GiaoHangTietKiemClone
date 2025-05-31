@@ -33,7 +33,35 @@ npm start
 > **Lưu ý:** Đảm bảo backend/API đã chạy và cấu hình endpoint đúng trong `.env`.
 
 ## 🗂️ Cấu trúc thư mục
-
+```
+.
+└── Post
+    ├── __tests__                    // all the tests for this module goes here
+    |   ├── components               // Sub components of this module
+    |   |   ├── Post.spec.js
+    |   |   ├── PostList.spec.js
+    |   |   ├── PostItem.spec.js
+    |   |   └── PostImage.spec.js
+    |   ├── pages
+    |   |   ├── PostPage.spec.js
+    |   |   └── PostViewPage.spec.js
+    |   ├── PostReducer.spec.js
+    |   └── PostActions.spec.js
+    ├── components                   // Sub components of this module
+    |   ├── Post.js
+    |   ├── PostList.js
+    |   ├── PostItem.js
+    |   └── PostImage.js
+    ├── pages                        // React Router Pages from this module
+    |   ├── PostPage
+    |   |   ├── PostPage.js
+    |   |   └── PostPage.css
+    |   └── PostViewPage
+    |       ├── PostViewPage.js
+    |       └── PostViewPage.css
+    ├── PostReducer.js
+    └── PostActions.js
+```
 ## ⚡️ Các lệnh npm
 
 | Lệnh                | Mô tả                                 |
