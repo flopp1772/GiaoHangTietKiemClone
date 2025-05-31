@@ -5,8 +5,6 @@
 
 **GHTK Clone** là hệ thống quản lý giao vận hiện đại, đa vai trò, tối ưu cho shipper và khách hàng, sử dụng React, Redux Toolkit, Material UI, với luồng dữ liệu đồng bộ, hiệu năng cao và UI thân thiện.
 
----
-
 ## 🚀 Tính năng nổi bật
 
 - **Khách hàng:** Tạo, theo dõi, quản lý đơn hàng, tra cứu trạng thái, phí ship, chi tiết đơn.
@@ -16,8 +14,6 @@
 - **Đồng bộ dữ liệu:** Redux Toolkit, cập nhật trạng thái nhanh, không cần reload toàn bộ danh sách.
 - **Tích hợp Google Maps:** Chỉ đường nhanh cho shipper.
 
----
-
 ## 🛠️ Công nghệ sử dụng
 
 - **Frontend:** ReactJS, Redux Toolkit, Material UI v5
@@ -25,8 +21,6 @@
 - **API:** RESTful, thunk CRUD (fetchOrders, updateOrder, ...)
 - **Backend:** (Tuỳ chọn: NodeJS/Express/MongoDB hoặc backend riêng)
 - **Khác:** Google Maps, responsive UI, tối ưu hiệu năng
-
----
 
 ## 📦 Cài đặt & Khởi động
 
@@ -38,22 +32,57 @@ npm start
 ```
 > **Lưu ý:** Đảm bảo backend/API đã chạy và cấu hình endpoint đúng trong `.env`.
 
----
-
 ## 🗂️ Cấu trúc thư mục
+```
+.
+└── Post
+    ├── __tests__                    // all the tests for this module goes here
+    |   ├── components               // Sub components of this module
+    |   |   ├── Post.spec.js
+    |   |   ├── PostList.spec.js
+    |   |   ├── PostItem.spec.js
+    |   |   └── PostImage.spec.js
+    |   ├── pages
+    |   |   ├── PostPage.spec.js
+    |   |   └── PostViewPage.spec.js
+    |   ├── PostReducer.spec.js
+    |   └── PostActions.spec.js
+    ├── components                   // Sub components of this module
+    |   ├── Post.js
+    |   ├── PostList.js
+    |   ├── PostItem.js
+    |   └── PostImage.js
+    ├── pages                        // React Router Pages from this module
+    |   ├── PostPage
+    |   |   ├── PostPage.js
+    |   |   └── PostPage.css
+    |   └── PostViewPage
+    |       ├── PostViewPage.js
+    |       └── PostViewPage.css
+    ├── PostReducer.js
+    └── PostActions.js
+```
 
----
+## ⚡️ Các lệnh npm backend
 
-## ⚡️ Các lệnh npm
+| Lệnh                             | Mô tả                                        |
+|----------------------------------|----------------------------------------------|
+| npm start                        | Chạy server backend (Node.js)                |
+| npx prisma migrate dev           | Chạy migration Prisma                        |
+| npx prisma migrate reset --force | Reset database và migrate lại                |
+| npx prisma generate              | Sinh lại Prisma Client                       |
+| npx prisma studio                | Mở Prisma Studio (giao diện quản lý DB)      |
+| npm run seed                     | Seed dữ liệu mẫu (nếu có script seed)        |
+| npm list --depth=0               | Kiểm tra các package đã cài                  |
 
-| Lệnh                | Mô tả                                 |
-|---------------------|---------------------------------------|
-| npm start           | Chạy dev server với hot reload         |
-| npm run build       | Build production                      |
-| npm run test        | Chạy test                             |
-| npm run lint        | Kiểm tra lint                         |
+## ⚡️ Các lệnh npm frontend
 
----
+| Lệnh                | Mô tả                                         |
+|---------------------|-----------------------------------------------|
+| npm run dev         | Chạy server phát triển (Vite, hot reload)     |
+| npm run build       | Build project cho production                  |
+| npm run preview     | Xem thử bản build production trên local       |
+| npm run lint        | Kiểm tra code với ESLint                      |
 
 ## 🧩 Luồng hoạt động chính
 
@@ -62,13 +91,9 @@ npm start
 3. **Mọi thay đổi trạng thái/ghi chú đều cập nhật trực tiếp vào Redux store, UI tự động đồng bộ.**
 4. **Dữ liệu luôn được lấy mới nhất từ Redux, đảm bảo đồng bộ giữa các thành phần.**
 
----
-
 ## 📝 Đóng góp
 
 PRs luôn được chào đón! Hãy fork repo, tạo branch mới và gửi pull request.
-
----
 
 ## 📄 License
 
