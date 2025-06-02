@@ -24,13 +24,43 @@
 
 ## 📦 Cài đặt & Khởi động
 
-```sh
+### 1. Yêu cầu hệ thống
+- Node.js >= 16.x
+- MySQL >= 8.0
+- Git
+- npm hoặc yarn
+
+### 2. Cài đặt Backend
+
+```bash
+# Clone repository
 git clone <your-repo-url>
-cd <your-repo-folder>
+cd GiaoHangTietKiemClone/backend
+
+# Cài đặt dependencies
 npm install
-npm start
+
+# Tạo file .env dựa vào .env.example
+# Chạy migrations
+npx prisma migrate dev
+
+# Khởi động server
+npm run dev
 ```
-> **Lưu ý:** Đảm bảo backend/API đã chạy và cấu hình endpoint đúng trong `.env`.
+
+### 3. Cài đặt Frontend
+
+```bash
+cd ../client
+
+# Cài đặt dependencies
+npm install
+
+# Tạo file .env dựa vào .env.example
+
+# Khởi động development server
+npm run dev
+```
 
 ## 🗂️ Cấu trúc thư mục
 ```
