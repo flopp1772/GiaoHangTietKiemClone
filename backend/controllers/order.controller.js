@@ -315,15 +315,22 @@ export const updateOrderById = async (req, res) => {
             return res.status(403).json({ message: "Permission denied" });
         }
 
+        // Destructure tất cả các trường có thể cập nhật trực tiếp từ req.body
         const {
             shippingFee,
-            shippingAddress,
+            addressDetail,
+            province,
+            district,
+            ward,
+            zip,
+            latitude,
+            longitude,
             recipientName,
             recipientPhone,
             note,
             weight,
             quantity,
-            status,
+            status
         } = req.body;
 
         // Nếu là shipper chỉ cho phép cập nhật status
@@ -331,15 +338,22 @@ export const updateOrderById = async (req, res) => {
         if (req.role === "shipper") {
             if (typeof status !== 'undefined') updateData.status = status;
         } else {
+            // Admin/Customer cập nhật trực tiếp các trường
             updateData = {
                 shippingFee,
-                shippingAddress,
+                addressDetail,
+                province,
+                district,
+                ward,
+                zip,
+                latitude,
+                longitude,
                 recipientName,
                 recipientPhone,
                 note,
                 weight,
                 quantity,
-                status,
+                status
             };
         }
 

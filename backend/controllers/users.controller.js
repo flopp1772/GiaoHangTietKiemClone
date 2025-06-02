@@ -246,8 +246,11 @@ export const updateUser = async (req, res) => {
             where: { id }
         });
 
-        if (!user || user.is_deleted) {
+        if (!user) {
             return res.status(404).json({ error: "User not found" });
+        }
+        if (user.is_deleted) {
+            return res.status(400).json({ error: "User has been deleted. Please restore the user before updating." });
         }
 
         // Cập nhật user (không cập nhật password)

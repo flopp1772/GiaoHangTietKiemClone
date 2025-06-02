@@ -24,10 +24,10 @@ router.get("/", getAllOrders);
 router.get("/:id", getOrderById);
 
 // Cập nhật đơn - chỉ admin và staff được phép
-router.put("/:id", verifyRole(['admin', 'shipper']), updateOrderById);
+router.put("/:id", verifyRole(['admin', 'shipper', 'customer']), updateOrderById);
 
-// Xóa mềm đơn - chỉ admin được phép
-router.delete("/:id", verifyRole(['admin']), deleteOrderById);
+// Xóa mềm đơn - chỉ admin và customer được phép
+router.delete("/:id", verifyRole(['admin', 'customer']), deleteOrderById);
 
 // Phục hồi đơn - chỉ admin được phép
 router.put("/:id/restore", verifyRole(['admin']), restoreOrderById);
