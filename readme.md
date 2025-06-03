@@ -125,6 +125,10 @@ npm run dev
 
 PRs luôn được chào đón! Hãy fork repo, tạo branch mới và gửi pull request.
 
+## 📚 Coding Style & Naming Conventions
+
+Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines on coding style, naming conventions, and best practices. This helps keep the codebase clean, consistent, and easy to maintain for everyone.
+
 ## 📄 License
 
 Dự án phát hành theo [MIT License](http://www.opensource.org/licenses/MIT).
